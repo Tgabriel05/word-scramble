@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: url(assets/bg-guess-the-word.png
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.container{
+  background:linear-gradient(to right,#080C1D,#171E30);
+  border-radius: 10px;
+  min-width: 420px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 20px 25px;
+  text-align: center;
+}
+.container img{
+  padding: 10px 0 25px;
+}
+#word,.score,.tries,#letters,.buttons{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+#word{
+  background: #4A5567;
+  padding: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 0 #030616;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#word h3{
+  font-size: 2rem;
+  color: #97A3B6;
+  font-weight: 500;
+  padding: 0 10px;
+}
+/*TRIES AND MISTAKES*/
+.score{
+  justify-content: space-between;
+  padding: 0 30px;
+}
+.score p{
+  color: #4A5567;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.mistakes p span{
+  font-size: 15px;
+  color: #97A3B6;
+}
+.tries{
+  gap: 5px;
+}
+.tried-letter{
+  background: #4A5567;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+}
+.check{
+  background: #7429C6;
+}
+.unchecked{
+  background: #4A5567;
+}
+
+/*LETTERS*/
+#letters{
+  padding: 50px 0;
+  gap: 7px;
+}
+#letters input{
+  border: 3px solid #4A5567;
+  height: 42px;
+  width: 45px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: none;
+  transition: all 0.3s;
+  outline: 0;
+  color: #F2F5F9;
+  caret-color: transparent;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.25rem;
+}
+#letters input::placeholder{
+  color: transparent;
+}
+#letters input:focus{
+  border: 3px solid #672171;
+}
+#letters input:focus::placeholder{
+  color: #F2F5F9;
+}
+/*BUTTONS*/
+.buttons{
+  gap: 35px;
+}
+.buttons button{
+  background-color: #C951E7;
+  color: #F2F5F9;
+  border: none;
+  outline: none;
+  padding: 10px 38px;
+  border-radius: 7px;
+  font-size: 0.875rem;
+  box-shadow: 0 4px 0 #672171;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+/*BUTTON ANIMATION*/
+@keyframes click{
+  0%{transform: translateY(0);}
+  50%{transform: translateY(7px);
+      box-shadow: none;}
+  0%{transform: translateY(0);}
+}
+/*BUTTON ANIMATION*/
+
+/*MEDIA RESPONSIVE*/
+@media screen and (max-width:640px) {
+  .container{
+    min-width: 180px;
+  }
+  #word h3{
+    font-size: 1.5rem;
+  }
+  .buttons{
+    gap: 25px;
+  }
+  .buttons button{
+    padding: 10px 28px;
+    font-size: 0.725rem;
+  }
+  .score{
+    padding:  0 20px;
+  }
+  .score p{
+    font-size: 0.595rem;
+  }
+  .mistakes p span{
+    font-size: 10px;
+  }
+  #letters input{
+    font-size: 1rem;
+    padding: 5px;
+    height: 38px;
+    width: 41px;
+  }
+
+}

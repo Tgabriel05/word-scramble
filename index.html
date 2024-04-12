@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Word Scramble</title>
+</head>
+<body>
+  
+  <div class="container">
+    <img src="assets/Word Scramblle.svg">
+    <div id="word" title="solución en la consola">
+    </div>
+    <div class="score">
+      <div class="tries">
+        <p>Tries (<span id="tries">0</span>/5):</p>
+        <div class="tried-letter"></div>
+        <div class="tried-letter"></div>
+        <div class="tried-letter"></div>
+        <div class="tried-letter"></div>
+        <div class="tried-letter"></div>
+      </div>
+      <div class="mistakes">
+        <p>Mistakes: <span id="mistakes">a, e, w, t</span></p>
+      </div>
+    </div>
+
+    <div id="letters">
+      <!-- <input type="text" value="_">
+      <input type="text">
+      <input type="text">
+      <input type="text"> -->
+    </div>
+
+    <div class="buttons">
+      <button id="random-btn">Random</button>
+      <button id="reset-btn">Reset</button>
+    </div>
+
+  </div>
+
+
+  <!-----------SCRIPT------------->
+  <script src="script.js"></script>
+</body>
+</html>
